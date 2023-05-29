@@ -15,8 +15,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build ./docker --file Dockerfile --tag Docker-Signal-Desktop:$(date +%s)
+      run: docker build ./docker --file Dockerfile --tag mrswaggerr/docker-signal-desktop:$(date +%s)
     - name: export CR_PAT
       run: export CR_PAT=GITHUB_TOKEN
     - name: push docker
-      run: docker push ghcr.io/MrSwaggerr/Docker-Signal-Desktop:latest
+      run: docker push ghcr.io/mrswaggerr/docker-signal-desktop:latest
