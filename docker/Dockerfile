@@ -28,7 +28,7 @@ ARG APP_ICON
 RUN install_app_icon.sh ${APP_ICON}
 
 # Entrypoint script
-COPY ./startapp.sh /startapp.sh
+COPY ./docker/startapp.sh /startapp.sh
 
 # Volumes definition
 VOLUME ["/config"]
